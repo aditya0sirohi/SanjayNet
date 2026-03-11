@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import * as Cesium from "cesium"
 import "cesium/Build/Cesium/Widgets/widgets.css"
 
-const GOOGLE_API_KEY = "AIzaSyDaY-5R6F7WZyw11GEm-U1uuu1ebx3B1CI"
+const GOOGLE_API_KEY = ""
 
 // Simple inline SVG airplane icon to avoid external asset dependency
 const PLANE_SVG =
