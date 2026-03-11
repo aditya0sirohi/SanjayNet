@@ -1,0 +1,254 @@
+
+# Product Requirements Document (PRD)
+
+## Product Name
+
+**SanjayNet**
+
+## Tagline
+
+*Real-time spatial intelligence for situational awareness.*
+
+Inspired by **Sanjaya** from the **Mahabharata**, who could observe the **Kurukshetra War** remotely and narrate events in real time.
+
+SanjayNet aims to bring that concept into the modern world using geospatial data.
+
+---
+
+# 1. Problem Statement
+
+Critical real-world events—such as disasters, infrastructure failures, or strategic activities—are monitored by multiple agencies using fragmented systems.
+
+These systems often suffer from:
+
+* siloed data sources
+* limited visualization tools
+* lack of unified situational awareness
+
+Decision-makers must consult multiple platforms to understand what is happening in a region.
+
+There is no **simple unified spatial interface that fuses multiple live data streams into one operational view**.
+
+---
+
+# 2. Vision
+
+Create a **spatial intelligence interface** that integrates real-time geospatial data streams and presents them in an intuitive interactive map.
+
+The platform will enable users to:
+
+* observe live events
+* detect anomalies
+* understand spatial relationships between signals.
+
+---
+
+# 3. Scope for Round-1 Prototype
+
+The Round-1 prototype will demonstrate **one core capability**:
+
+### Real-Time Airspace Awareness Over India
+
+This scenario showcases how SanjayNet can monitor and analyze aircraft movement in real time using open data.
+
+---
+
+# 4. Demo Scenario
+
+### Scenario Name
+
+**Airspace Activity Monitoring Over Northern India**
+
+The prototype will show:
+
+1. A 3D map of India
+2. Live aircraft positions
+3. Aircraft movement trajectories
+4. Detection of abnormal flight density or unusual routes
+
+The system highlights regions with unusual airspace activity.
+
+---
+
+# 5. Key Features for Prototype
+
+## Feature 1 — Interactive 3D Map
+
+Users can:
+
+* view India in a 3D geospatial map
+* zoom into specific regions
+* rotate and explore terrain
+
+Technology:
+
+* CesiumJS
+* OpenStreetMap terrain tiles
+
+---
+
+## Feature 2 — Real-Time Aircraft Tracking
+
+Aircraft positions are fetched from a live aviation data source.
+
+Displayed on the map as moving markers.
+
+Information shown:
+
+* aircraft location
+* altitude
+* velocity
+* callsign
+
+Markers update periodically.
+
+---
+
+## Feature 3 — Aircraft Trajectory Visualization
+
+Recent flight path history is drawn behind each aircraft.
+
+This helps visualize:
+
+* routes
+* direction of movement
+* traffic corridors.
+
+---
+
+## Feature 4 — Airspace Activity Alert (Simple AI Layer)
+
+The system analyzes aircraft density in a region.
+
+If aircraft count in a grid cell exceeds a threshold, the region is flagged as:
+
+**High Air Traffic Activity**
+
+Highlighted using colored overlays.
+
+This demonstrates the **intelligence layer**.
+
+---
+
+# 6. User Flow
+
+User opens SanjayNet dashboard.
+
+1. Map loads centered on India.
+2. Aircraft markers appear.
+3. User zooms into North India.
+4. Aircraft trajectories become visible.
+5. A heatmap overlay shows airspace density.
+
+Optional alert appears:
+
+“High aircraft activity detected in this region.”
+
+---
+
+# 7. Screenshots Required for Submission
+
+The prototype should generate these screenshots for the PPT:
+
+### Screenshot 1
+
+3D India map with terrain.
+
+### Screenshot 2
+
+Aircraft markers over India.
+
+### Screenshot 3
+
+Zoomed-in view showing aircraft trajectories.
+
+### Screenshot 4
+
+Airspace density heatmap.
+
+### Screenshot 5
+
+Alert highlighting high-activity region.
+
+---
+
+# 8. System Architecture (Prototype)
+
+```id="lffqju"
+Frontend
+React + CesiumJS Map
+
+Backend
+FastAPI server
+
+External APIs
+OpenSky Network (aircraft data)
+
+Data Flow
+OpenSky → Backend → Map visualization
+```
+
+Most visualization runs **client-side in browser**.
+
+---
+
+# 9. Technology Stack
+
+Frontend
+
+* React
+* CesiumJS
+* WebGL
+
+Backend
+
+* FastAPI (Python)
+
+Data
+
+* OpenSky Network API
+
+Hosting
+
+* simple cloud instance
+
+---
+
+# 10. Non-Goals (For Round-1)
+
+The following will **not be implemented yet**:
+
+* disaster prediction models
+* satellite image processing
+* large-scale data ingestion
+* multi-sensor fusion
+* mobile app
+
+These will be described as **future capabilities**.
+
+---
+
+# 11. Future Extensions
+
+SanjayNet can expand to include:
+
+* satellite tracking
+* weather overlays
+* disaster prediction
+* maritime monitoring
+* environmental intelligence
+
+Eventually evolving into a **comprehensive spatial intelligence platform for India**.
+
+---
+
+# 12. Success Criteria
+
+The prototype is successful if it:
+
+* demonstrates real-time aircraft visualization
+* shows spatial awareness capabilities
+* produces clear screenshots for presentation
+* communicates the potential of the full platform.
+
+---
