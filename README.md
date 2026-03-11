@@ -1,21 +1,3 @@
-﻿# SanjayNet
-Perfect move. Updating the **README before PPT** is actually a very smart step because it forces you to **clarify the project narrative**. Right now the biggest risk for your project isn’t the code — it’s **the story**.
-
-I’ll give you a **clean hackathon-grade README structure** that:
-
-* explains the **problem**
-* explains **why SanjayNet exists**
-* clearly states **what’s built**
-* shows **future intelligence features**
-* has a **demo section for screenshots**
-* makes it clear this is a **prototype**
-
-You can paste this almost directly into your repo.
-
----
-
-# README.md Draft for **SanjayNet**
-
 ## SANJAYNET
 
 **Multi-Source Geospatial Surveillance & Intelligence System**
@@ -259,3 +241,4 @@ frontend/
 
 
 Team SanjayNet
+
